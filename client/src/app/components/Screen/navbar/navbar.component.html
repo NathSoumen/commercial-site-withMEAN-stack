@@ -19,13 +19,17 @@
   <div>
     <ul class="nav_ul">
       <li class="nav-item">
-        <a class="loginMenu"> login <span>&#x25BC;</span></a>
-        <ul class="submenu">
-          <li>new user <a href="#">sign up</a></li>
-          <li href="#"><a href="">profile</a></li>
-          <li href="#"><a href="">my history</a></li>
-        </ul>
+        <div class="dropdown">
+          <button class="dropbtn">login <span class="arrow"> &#x25BC;</span></button>
+          <div class="dropdown-content">
+            <a href="#"><em>new user</em> <span class="register">register</span></a>
+            <a href="#">my profile</a>
+            <a href="#">my history</a>
+          </div>
+        </div>
+       
       </li>
+
       <li><a href="">cart</a></li>
     </ul>
   </div>
