@@ -5,10 +5,9 @@ exports.signup = function(req,res,next) {
 
     let newUser  = new customerModel();
     newUser.username = req.body.username;
-    newUser.email = req.body.username;
-    newUser.mobile = req.body.username;
-    newUser.country = req.body.username;
-    newUser.mobile = req.body.username;
+    newUser.email = req.body.email;
+    newUser.mobile = req.body.mobile;
+    newUser.country = req.body.country;
     newUser.password = newUser.hassPass(req.body.password);
     newUser.save().then(() => {
         res.status(200).send({success:true, msg:"user added"})
