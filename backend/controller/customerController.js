@@ -24,6 +24,7 @@ exports.login = function(req,res,next) {
 
      
 }
+// check if email is exists
 exports.checkEmail = async function(req,res,next) {    
     console.log(req.body)
     customerModel.findOne({email:req.body.email}).then((user) => {
