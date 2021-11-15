@@ -1,6 +1,6 @@
 const customerModel = require('../model/customerAuth')
 
-
+// signup
 exports.signup = function(req,res,next) {    
 
     let newUser  = new customerModel();
