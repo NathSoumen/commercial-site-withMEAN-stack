@@ -17,6 +17,9 @@
     "jsonwebtoken": "^8.5.1",
     "mongoose": "^6.0.12",
     "morgan": "~1.9.1",
-    "multer": "^1.4.3"
+    "multer": "^1.4.3",
+    "paytm-pg-node-sdk": "^1.0.4",
+    "stripe": "^8.189.0",
+    "uuidv4": "^6.2.12"
   }
 }

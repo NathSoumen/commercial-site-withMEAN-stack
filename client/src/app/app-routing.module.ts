@@ -10,7 +10,11 @@ const routes: Routes = [
   },
   {
     path:'home',component:HomeComponent
-  },{
+  },
+  {
+    path:"user",loadChildren: () => import('./components/Screen/userForm/userForm.module').then( m => m.UserFormModule)
+  },  
+  {
     path:"**",component:ErrorNotFoundComponent
   }
   
