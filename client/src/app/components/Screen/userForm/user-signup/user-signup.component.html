@@ -1,13 +1,19 @@
 <div id="login-box">
     <div class="left">
-      <h1>Sign up</h1>
+      <form [formGroup]="registerForm" (ngSubmit)="submit()">
+        <h1>Sign up</h1>      
+      <input type="text" formControlName="username" name="username" placeholder="Username" />
+      <!-- <input type="number" formControlName="mobile" pattern="/^-?\d+\.?\d*$/" onKeyPress="if(this.value.length==10) return false;" />  -->
+
+      <input type="text" formControlName="mobile" name="mobile" placeholder="mobile" maxlength="10"/>
+      <input type="email" formControlName="email" name="email" placeholder="E-mail" />
+      <input type="password" formControlName="password" name="password" placeholder="Password" />
+      <input type="password" (change) = "passMatch()" formControlName="confirm" name="password" placeholder="Retype password" />      
+      <input type="text" formControlName="country" name="country" placeholder="country" />
+      <p *ngIf="isFormFill() !== false">please fill the form</p>
+      <button type="submit" (click)="checkInput()" [disabled]="isFormFill()">submit</button>
+      </form>
       
-      <input type="text" name="username" placeholder="Username" />
-      <input type="text" name="email" placeholder="E-mail" />
-      <input type="password" name="password" placeholder="Password" />
-      <input type="password" name="password2" placeholder="Retype password" />
-      
-      <input type="submit" name="signup_submit" value="Sign me up" />
     </div>
     
     <div class="right">

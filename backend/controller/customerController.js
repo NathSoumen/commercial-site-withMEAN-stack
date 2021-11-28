@@ -1,5 +1,31 @@
 const customerModel = require("../model/customerAuth");
 const jwt = require("jsonwebtoken");
+// get all users
+
+
+
+exports.allusers = async function (req, res,next) {
+ await customerModel.find({}).then((user) => {
+    res
+    .status(200)
+    .send({
+      success: true,
+      users:user
+    });
+
+  }).catch((err) => {
+    res
+    .status(200)
+    .send({
+      success: false,
+      err: err,   
+    });
+  })
+}
+
+
+
+
 // signup
 exports.signup = function (req, res, next) {
   let newUser = new customerModel();

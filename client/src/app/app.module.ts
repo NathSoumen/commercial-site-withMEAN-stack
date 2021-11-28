@@ -14,7 +14,8 @@ import { ErrorNotFoundComponent } from './components/Screen/error-not-found/erro
 import { BsDatepickerModule } from 'ngx-bootstrap/datepicker';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NavbarComponent } from './components/Screen/navbar/navbar.component';
-
+import { HttpClientModule } from '@angular/common/http';
+import {UserFormServiceService} from './service/user-form-service.service'
 
 
 @NgModule({
@@ -34,9 +35,9 @@ import { NavbarComponent } from './components/Screen/navbar/navbar.component';
     RoutingModule,
     BsDatepickerModule.forRoot(),
     BrowserAnimationsModule,       
-    
+    HttpClientModule
   ],
-  providers: [],
+  providers: [UserFormServiceService],
   bootstrap: [AppComponent]
 })
 export class AppModule { 
