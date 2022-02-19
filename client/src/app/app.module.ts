@@ -15,7 +15,10 @@ import { BsDatepickerModule } from 'ngx-bootstrap/datepicker';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NavbarComponent } from './components/Screen/navbar/navbar.component';
 import { HttpClientModule } from '@angular/common/http';
-import {UserFormServiceService} from './service/user-form-service.service'
+import {UserFormServiceService} from './service/user-form-service.service';
+import { SidebarComponent } from './components/sidebar/sidebar.component';
+import { UserProfileComponent } from './components/user-profile/user-profile.component';
+import { PaymentComponent } from './components/Screen/payment/payment.component'
 
 
 @NgModule({
@@ -26,7 +29,10 @@ import {UserFormServiceService} from './service/user-form-service.service'
     ProductComponent,
     AdminDashBoardComponent,
     ErrorNotFoundComponent,
-    NavbarComponent,  
+    NavbarComponent,
+    SidebarComponent,
+    UserProfileComponent,
+    PaymentComponent,  
   
   ],
   imports: [

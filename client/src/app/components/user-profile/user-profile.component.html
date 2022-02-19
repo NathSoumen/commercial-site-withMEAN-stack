@@ -1,0 +1,13 @@
+<div class="container" style="display: flex;flex-wrap: wrap;flex-direction: row;">
+    <div class="card" style="width: 18rem; margin: 0.5rem ;padding:0.5rem;background-color: rgba(230, 230, 230, 0.877);" *ngFor="let user of newArr">
+        <img src="assets/img/heroku.png" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Name <span>{{user.name}}</span></h5>
+          <h5 class="card-title">Email <span>{{user.email}}</span></h5>
+          <h5 class="card-title">phone <span>{{user.phone}}</span></h5>
+          <h5 class="card-title">website <span>{{user.website}}</span></h5>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
+    </div>
+</div>

@@ -9,7 +9,7 @@ module.exports = function(mongoose) {
             }
         })
     } else {
-        mongoose.connect('mongodb://localhost:27017/test',(err) => {
+        mongoose.connect('mongodb://localhost:27017/commercialtest',(err) => {
             if(!err) {
                 console.log("local Database is connected");
             } else {

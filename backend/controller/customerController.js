@@ -2,7 +2,7 @@ const customerModel = require("../model/customerAuth");
 const jwt = require("jsonwebtoken");
 // get all users
 
-
+const OTP = require('./otp.controller')
 
 exports.allusers = async function (req, res,next) {
  await customerModel.find({}).then((user) => {
@@ -36,8 +36,17 @@ exports.signup = function (req, res, next) {
   newUser.password = newUser.hassPass(req.body.password);
   newUser
     .save()
-    .then(() => {
-      res.status(200).send({ success: true, msg: "user added" });
+    .then((d) => {
+      OTP.OtpSend(d.mobile,d.email,(re)=>{
+        console.log('==================',re)
+        if(re.return == true) {
+          res.status(200).send({ success: true, msg: "user added" });
+
+        } else {
+          res.status(200).send({ success: false, err: "Something went wrong" });
+
+        }
+      })
     })
     .catch((err) => {
       res.status(200).send({ success: false, err: err });
